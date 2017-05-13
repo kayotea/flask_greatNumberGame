@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+       <title>Great Number Game</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h3>Welcome to the Great Number Game!</h3>
+            <p>I am thinking of a number between 1 and 100</p>
+            <p>Take a guess!</p>
+            <p id='{{session["low"]}}' class='wrong_guess'>Too Low</p>
+            <p id='{{session["high"]}}' class='wrong_guess'>Too High</p>
+
+            <!--user guess submit form:
+            takes guess and passess to app route '/guess'-->
+            <form action='/guess' method='post'>
+                <input id="{{session['player_guess']}}" type="text" name="guess"><br>
+                <input id="{{session['player_guess']}}" type="submit" value="Submit">
+            </form>
+            <!--reset form:
+            shown only when user wins guessing Game
+            passes to route '/reset'-->
+            <form action='/reset' method='post'>
+                <div id="{{session['play_again']}}" class="win">
+                    <p>{{session['number']}} was the number!</p>
+                    <input id="{{session['play_again']}}" type="submit" value="Play Again!">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

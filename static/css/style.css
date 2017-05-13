@@ -1,0 +1,32 @@
+#wrapper{
+    margin: 0px auto;
+    text-align: center;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    width: 500px;
+}
+#hideme{
+    display: None;
+}
+#showme{
+    display: inline-block;
+}
+.wrong_guess{
+    background-color: red;
+    color: white;
+    font-size: 150%;
+    width: 200px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 20px 0px;
+}
+.win{
+    background-color: green;
+    color: white;
+    font-size: 150%;
+    width: 200px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
